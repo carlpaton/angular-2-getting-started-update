@@ -9,6 +9,7 @@ All notes and code based on the work done by [Deborah Kurata](https://app.plural
 * https://www.npmjs.com/~angular
 * https://getbootstrap.com/
 * https://fontawesome.com/
+* https://developer.mozilla.org/en-US/docs/Web/Events
 
 ### Setup
 
