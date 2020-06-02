@@ -27,7 +27,7 @@
 | package.json                               | Stores dependencies (libruarys/packages) that your application needs to run, NPM will download and install these to `node_modules` |
 | Lazy Load                                  |                                                              |
 | Load on start                              |                                                              |
-| Decorator                                  | Used to define MetaData on a component. Its a function that adds MetaData to a class, its members or its method arguments.<br /><br />EG: `@Component({ })`<br />EG: `@NgModule({ })`<br />EG: `@HostListener()`<br />EG: `@Pipe({})` |
+| Decorator                                  | Used to define MetaData on a component. Its a function that adds MetaData to a class, its members or its method arguments.<br /><br />EG: `@Component({ })`<br />EG: `@NgModule({ })`<br />EG: `@HostListener()`<br />EG: `@Pipe({})`<br />EG: `@Input() rating: number;`<br />EG: `@Output() ratingClicked: EventEmitter<string> = new EventEmitter<string>();` |
 |                                            |                                                              |
 | MetaData                                   | Provides extra data for Angular, the metadata defines the class as an Angular component. |
 | selector                                   | Defines the components directive name, the perfix **pm** relates to your project. The examples from [Deborah Kurata](https://app.pluralsight.com/profile/author/deborah-kurata) was for a Product Manger, so she used **pm**.<br /><br />EG: `selector: 'pm-root'` |
