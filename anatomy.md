@@ -22,11 +22,12 @@
 | CLI (Command Line Interface)               |                                                              |
 | Transpiled                                 | New JS (JavaScript) features in code must be compiled by a tool that converts the new JS syntax (ES2015) to comprable older syntax the browser can understand. |
 | TypeScript                                 | Strongly typed and Open source super set of JavaScript developed by Microsoft. TypeScript transpiles to JavaScript. |
-| ES2015                                     | Is Class-based object-orientated, allows for interfaces and inheritance. |
+| ES5                                        |                                                              |
+| ES2015 (ES6)                               | Is Class-based object-orientated, allows for interfaces and inheritance.<br /><br />(TODO - interfaces/inheritance may be a typescript thing and not ES2015??) |
 | package.json                               | Stores dependencies (libruarys/packages) that your application needs to run, NPM will download and install these to `node_modules` |
 | Lazy Load                                  |                                                              |
 | Load on start                              |                                                              |
-| Decorator                                  | Used to define MetaData on a component. Its a function that adds MetaData to a class, its members or its method arguments.<br /><br />EG: `@Component({ })`<br />EG: `@NgModule({ })`<br />EG: `@HostListener()` |
+| Decorator                                  | Used to define MetaData on a component. Its a function that adds MetaData to a class, its members or its method arguments.<br /><br />EG: `@Component({ })`<br />EG: `@NgModule({ })`<br />EG: `@HostListener()`<br />EG: `@Pipe({})` |
 |                                            |                                                              |
 | MetaData                                   | Provides extra data for Angular, the metadata defines the class as an Angular component. |
 | selector                                   | Defines the components directive name, the perfix **pm** relates to your project. The examples from [Deborah Kurata](https://app.pluralsight.com/profile/author/deborah-kurata) was for a Product Manger, so she used **pm**.<br /><br />EG: `selector: 'pm-root'` |
@@ -38,5 +39,13 @@
 | Property Binding                           | Allows us to set a property value of an element to the value of a template expression.<br />EG:<br /><br /><img [src]='product.imageUrl'<br/>                            [title]='product.productName'<br/>                            [style.width.px]='imageWidth'<br/>                            [style.margin.px]='imageMargin'> |
 | Event Binding                              | This is how a component listens for use actions.<br />EG: `<button (click)='toggleImage()'>`<br /><br />Here the bound target event is closed in parentheses: `(click)` and the template statement is the method to be called.<br /><br />List of DOM events:<br /><br />https://developer.mozilla.org/en-US/docs/Web/Events |
 | Two-way Binding                            | This is displaying a component class property in the template and update that property when the user makes a change. This is done with the `ngModel` directive. <br /><br />EG: `<input [(ngModel)]='listFilters'`, this is commonly called bananna in a box `[()]`<br />The square brackets mean property binding and parentheses to indecate event binding.<br /><br />`ngModel` will need to be imported from `FormsModule` in the module that owns your component. |
-|                                            |                                                              |
+| Interface                                  | A specification identifying a related set of properties and methods. A class will commit to supporting the specification by implmenting the interface, we can then use the interface as a data type. The interface will however be transpiled out and not found in the resulting Javascript, this means they are for development time only to support strong typing and debugging. |
+| Encapsulating Component Styles             | When a template requires unique styles we dont want these to leak out into other templates. These can be specified in the `@Component` decorator in two ways<br /><br />`styles: ['thead {color: #CCC}']`<br />or<br />`styleUrls: ['./product-list.component.css']` |
+| Componnet Lifecycle Hooks                  | Create -> Render -> Create and render children -> Process changes -> Destroy<br /><br />EG:<br /><br />`export class ProductListComponent implements OnInit { ...` <br />`ngOnInit(): void { ...` |
+| OnInit                                     | Perform any component initialzation after Angular has initialzed the data bound properties. We can also retrieve data from a back end service in this Lifecycle Hook. |
+| OnChanges                                  | Peform action after change to input properties               |
+| OnDestroy                                  | Any cleanup needed before Angular destroys the component.    |
+| Backing field                              | This is a private member used to store state<br />EG: `private _listFilter: string'` |
+| Getter                                     | Used to return backing field<br />EG: `get listFilter() : string { return this._listFilter; }`<br />Its accessed as if it was a property <br />EG: `console.log(this.listFilter);` |
+| Setter                                     | Used to set the backing field<br />EG: `set listFilter(value: string) { this._listFilter = value; }`<br />Its accessed as if it was a property <br />EG: `this.listFilter = 'foo';` |
 

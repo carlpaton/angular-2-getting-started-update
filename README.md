@@ -10,6 +10,7 @@ All notes and code based on the work done by [Deborah Kurata](https://app.plural
 * https://getbootstrap.com/
 * https://fontawesome.com/
 * https://developer.mozilla.org/en-US/docs/Web/Events
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 
 ### Setup
 
